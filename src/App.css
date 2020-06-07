@@ -1,38 +1,114 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* z-index: 1; */ 
+  width: 100vw;
+  height: 100vh;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes displayFadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.displayAni{
+  animation: displayFadeIn 1000ms;
+  animation-fill-mode: forwards;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.example-enter {
+  opacity: 0.01;
 }
 
-.App-link {
-  color: #61dafb;
+.example-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms ease-in;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.example-appear {
+  opacity: 0.01;
 }
+
+.example-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.example-exit {
+  opacity: 1;
+}
+
+.example-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+.example-exit-done {
+  opacity: 0;
+}
+
+.display-enter {
+  opacity: 0.01;
+}
+
+.display-enter-active {
+  opacity: 1;
+  transition: opacity 2000ms ease-in;
+}
+
+.display-appear {
+  opacity: 0.01;
+}
+
+.display-appear-active {
+  opacity: 1;
+  transition: opacity 2000ms linear;
+}
+
+.display-exit {
+  opacity: 1;
+}
+
+.display-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+.display-exit-done {
+  opacity: 0;
+}
+
+@keyframes fadein {
+  from {background-color: rgba(185, 227, 241, 0)}
+  to {background-color: rgba(185, 227, 241, 1)}
+}
+
+#box{
+  /* background-color: rgba(255,255,255,100); */
+  animation: fadein 1s;
+  animation-fill-mode: forwards;
+}
+
+a:link {
+  color: rgba(181, 235, 255, 1);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgba(181, 235, 255, 1);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(181, 235, 255, 1);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgba(181, 235, 255, 1);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
